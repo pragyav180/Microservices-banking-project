@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  accounts:
+    image: "pragya24verma/accounts:s4"
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - networkBridge
+
+  loans:
+    image: "pragya24verma/loans:s4"
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - networkBridge
+
+  cards:
+    image: "pragya24verma/cards:s4"
+    container_name: cards-ms
+    ports:
+      - "9000:9000"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - networkBridge
+
+networks:
+  networkBridge:
+    driver: bridge

@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: qa   # ✅ NOW correct
+
+  config:
+    import:
+      - "classpath:application-qa.yml"
+      - "classpath:application-prod.yml"
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
