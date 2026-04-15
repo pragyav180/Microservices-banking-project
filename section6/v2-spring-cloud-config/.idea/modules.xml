@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Discovery-agent/Discovery-agent.iml" filepath="$PROJECT_DIR$/Discovery-agent/Discovery-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway-Server/Gateway-Server.iml" filepath="$PROJECT_DIR$/Gateway-Server/Gateway-Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-Cloud-config-server/Spring-Cloud-config-server.iml" filepath="$PROJECT_DIR$/Spring-Cloud-config-server/Spring-Cloud-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/cards/cards.iml" filepath="$PROJECT_DIR$/cards/cards.iml" />
       <module fileurl="file://$PROJECT_DIR$/loans/loans.iml" filepath="$PROJECT_DIR$/loans/loans.iml" />

@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-Cloud-config-server" />
+        <module name="Gateway-Server" />
         <module name="Discovery-agent" />
       </profile>
       <profile name="Annotation profile for loans" enabled="true">
@@ -33,6 +34,7 @@
     <bytecodeTargetLevel>
       <module name="cards" target="17" />
       <module name="Discovery-agent" target="17" />
+      <module name="Gateway-Server" target="17" />
       <module name="loans" target="17" />
       <module name="project" target="17" />
       <module name="Spring-Cloud-config-server" target="17" />
@@ -41,6 +43,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Discovery-agent" options="-parameters" />
+      <module name="Gateway-Server" options="-parameters" />
       <module name="Spring-Cloud-config-server" options="-parameters" />
       <module name="cards" options="-parameters" />
       <module name="loans" options="-parameters" />

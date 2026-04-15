@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/Spring-Cloud-config-server/pom.xml" />
         <option value="$PROJECT_DIR$/Discovery-agent/Discovery-agent/pom.xml" />
         <option value="$PROJECT_DIR$/Discovery-agent/pom.xml" />
+        <option value="$PROJECT_DIR$/Gateway-Server/pom.xml" />
       </list>
     </option>
   </component>
