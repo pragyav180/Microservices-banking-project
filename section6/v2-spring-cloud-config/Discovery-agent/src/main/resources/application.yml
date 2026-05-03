@@ -3,6 +3,7 @@ spring:
     name: "eurekaserver"
   config:
     import: "optional:configserver:http://localhost:8071/"
+
 management:
   endpoints:
     web:
@@ -17,4 +18,3 @@ management:
     health:
       probes:
         enabled: true
-

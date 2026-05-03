@@ -8,8 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-Cloud-config-server" />
+        <module name="discovery-agent" />
         <module name="Gateway-Server" />
-        <module name="Discovery-agent" />
       </profile>
       <profile name="Annotation profile for loans" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -33,6 +33,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cards" target="17" />
+      <module name="discovery-agent" target="17" />
       <module name="Discovery-agent" target="17" />
       <module name="Gateway-Server" target="17" />
       <module name="loans" target="17" />
@@ -46,6 +47,7 @@
       <module name="Gateway-Server" options="-parameters" />
       <module name="Spring-Cloud-config-server" options="-parameters" />
       <module name="cards" options="-parameters" />
+      <module name="discovery-agent" options="-parameters" />
       <module name="loans" options="-parameters" />
       <module name="project" options="-parameters" />
     </option>

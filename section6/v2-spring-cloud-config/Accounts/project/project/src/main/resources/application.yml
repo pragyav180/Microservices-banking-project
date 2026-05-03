@@ -1,37 +1,46 @@
 server:
   port: 8080
-
 spring:
   application:
     name: "accounts"
   profiles:
     active: "prod"
-
   datasource:
-    url: jdbc:mysql://localhost:3306/accountsdb
-    username: root
-    password: root
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
     show-sql: true
-  sql:
-      init:
-        mode: always
   config:
     import: "optional:configserver:http://localhost:8071/"
-
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
   endpoint:
-    shutdown:
-      enabled: true
-  info:
-    env:
-      enabled: true
-
+    gateway:
+      access: unrestricted
+    health:
+      probes:
+        enabled: true
 
 eureka:
   instance:
@@ -45,5 +54,19 @@ eureka:
 info:
   app:
     name: "accounts"
-    description: "Accounts application"
+    description: "Eazy Bank Accounts Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      accounts:
+        project: DEBUG
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 2
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
