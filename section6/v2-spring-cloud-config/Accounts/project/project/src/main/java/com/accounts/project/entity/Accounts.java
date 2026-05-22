@@ -1,10 +1,7 @@
 package com.accounts.project.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 
@@ -43,6 +40,9 @@ public class Accounts extends BaseEntity{
             description = "bank address",example = "Noida"
     )
    private String branchAddress;
+
+    @Column(name = "communication_sw")
+    private Boolean communicationSw;
 
 
 }
